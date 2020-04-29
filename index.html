@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+
+    <title> Bounce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+   
+   $(document).ready(function(){
+        $('#Text').click(() => {
+        console.warn("hello")
+        $('#dog').toggle()
+
+        });
+        
+
+  
+
+        $('#Jokes').click(() => {
+                var Jokes = new Array()
+        Jokes[0] = "Why did the Duck Cross the Road?: I don't Know!!"
+        Jokes[1] = "My Boss Told me a Story How You should Follow Your Dreams, So I Quit My Job at Work Infront of Hin"
+        Jokes[2] = "Why do Dragons Sleep During the Night? So They Can Attack Knights"
+        Jokes[3] = "Why did the Picture go to the Jail? He Wqs Framed 🤣"
+        Jokes[4] = "Why was the Bride late? She G"
+        Jokes[5] = ""
+
+        var rand = Math.floor(Math.random() * 5) 
+  
+       $('#Jo').text(Jokes[rand]);
+           
+        });
+ });
+   
+      
+
+
+    </script>
+
+        
+</head>
+
+<body>
+
+        <nav class="nav nav-pills flex-column flex-sm-row">
+                <a class="flex-sm-fill text-sm-center nav-link active" href="#"> Jokes</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="./quo.html"> Quotes</a>
+                <a class="flex-sm-fill text-sm-center nav-link disabled" href="./Ideas.html"> Coming Soon</a>
+        
+              </nav>
+              <br>
+
+
+        <div class="jumbotron">
+                <h1 class="display-4"> Get a Joke</h1>
+                <p class="lead"> Are you feeling Down? Let me Fix That! Get a Joke When You Clck the Button</p>
+                <hr class="my-4">
+                <p id="Jo"></p>
+                <button class="btn btn-primary btn-lg" href="#" role="button"  id="Jokes"> Tell me a Joke</a>
+              </div>
+
+              <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4"> Created By Woodfi for <a href="https://www.instagram.com/OptiveLabs"> Optive Labs</a></h1>
+                  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        By Woodfi, Learn More!
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                      
+               This App Was Created by  <a href="https://www.github.com/Woodfi">  Woodif</a>! We Create Open Source Tools, For Optive Labs!
+               <br> Feel free to Fork This 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+                </div>
+              </div>
+
+
+              <br>
+              <br>
+              <br>
+
+
+
+              <footer>
+            
+              </footer>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+   
+
+</html>
