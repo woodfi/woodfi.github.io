@@ -4,6 +4,7 @@
 <head>
 
     <title> Bounce</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
@@ -25,11 +26,17 @@
         Jokes[2] = "Why do Dragons Sleep During the Night? So They Can Attack Knights"
         Jokes[3] = "Why did the Picture go to the Jail? He Wqs Framed 🤣"
         Jokes[4] = "Why was the Bride late? She G"
-        Jokes[5] = " Happy Birthday Sonal Anuty :)"
+        Jokes[5] = " Helvitca and Times New Roman Walk into a bar, and the Bartender Says, We Don't allow your type"
+        Jokes[6] = "Why did the Arstonut Leave Earth? He Needed some Space!"
+        Jokes[7] = "Why didin't the Teddy Bear Eat his Pizza? He was Stuffed"
+        Jokes[8] = "9 + 10 = 21"
+        Jokes[9] = "A"
 
-        var rand = Math.floor(Math.random() * 6) 
+        var selector = Math.floor(Math.random() * 11) 
+        var hover = Math.floor(Math.round() * 11)
   
-       $('#Jo').text(Jokes[rand]);
+       $('#Jo').text(Jokes[selector]);
+
            
         });
  });
@@ -43,6 +50,9 @@
 </head>
 
 <body>
+        <button class="bg-orange-500 hover:bg-red-600 sm:bg-green-500 sm:hover:bg-green-600 md:bg-red-500 md:hover:bg-red-600 lg:bg-indigo-500 lg:hover:bg-indigo-600 xl:bg-pink-500 xl:hover:bg-pink-600 ">
+                Button
+              </button>
 
         <nav class="nav nav-pills flex-column flex-sm-row">
                 <a class="flex-sm-fill text-sm-center nav-link active" href="#"> Jokes</a>
@@ -103,22 +113,8 @@
 
 
 
-              <footer>
-            
-              </footer>
+             
 
-</body>
-
-
-
-
-
-
-
-
-
-
-
-   
+        </body>
 
 </html>

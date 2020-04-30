@@ -1,0 +1,12 @@
+img {
+   
+}
+
+img:hover {
+    box-shadow: black, 10px;
+}
+
+#padd1 {
+    padding: 4px;
+    border-radius: 12px;
+}
