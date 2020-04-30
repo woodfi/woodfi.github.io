@@ -1,0 +1,20 @@
+{
+    "name": "Bounce",
+    "version": "1.0.0",
+    "description": " Jokes, Quotes and Ideas Fast Easy Quick! ",
+    "main": "index.html",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/woodfi/bounce.git"
+    },
+    "author": "ktrvs",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://https://github.com/woodfi/bounce/issues"
+    },
+    "homepage": "https://github.com/woodfi/bounce/"
+  }
+  
