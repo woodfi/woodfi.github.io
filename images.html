@@ -10,97 +10,49 @@
 
 <!-- Scripts, Styles, and Layouts-->
 <script>
-(function($) {
-    $.fn.unsplash = function(options) {
-        //Default values
-        var defaults = {
-            client_id: 'VQxweJWOjpK3xKhhreETX4pdY_z_p_KpbDMfVVzR7qs',
-            limit: '100',
-            columns: '100',
-            width: '56'
-        };
-        var settings = $.extend({}, defaults, options);
-        
-        //Set default parameters
-        var page = $(".more").attr("href") ? undefined : 1;
-        var filter = $(".dropdown a").attr("href") ? undefined : 'laltest';
+const splash = async () => {
+    const TokenHider132 = ""
+    const TokenHider132
+    const TokenHider132
 
-        //Initialize Masonry
-        var $container = $('#unsplash');
-        $container.imagesLoaded(function() {
-            $container.masonry({
-                itemSelector: '.item'
-            });
-        });
-        function unsplash(page, filter) {
-            $.ajax({
-                url: 'https://api.unsplash.com/photos',
-                type: 'GET',
-                dataType: 'json',
-                data: {
-                    client_id: settings.client_id,
-                    page: page,
-                    per_page: settings.limit,
-                    order_by: filter
-                },
-                success: function(data) {
-                    $.each(data, function(i, item) {
-                        var containerWidth = $(".container").width();
-                        //Aspect Ratio
-                        var width = item.width;
-                        var height = item.height;
-                        var item_width = $(".item").width();
-                        var new_height = Math.round((height / width) * containerWidth/settings.columns);
-                        //Set custom width
-                        var image_url = item.urls.small.replace("&w=400", "&w=" + settings.width);
-                        var image = $("<img>").attr("src", image_url).hide();
-                        image.fadeToggle("slow");
-                        var link = $("<a class='link' target='_blank'>").attr("href", item.links.html).append(image).css({"height": new_height, "background-color":item.color});
-                        var name = $("<p>").append("By ", item.user.name);
-                        var item = $("<div class='item'>").append(link, name).css({"width": containerWidth/settings.columns});
-                        var $container = $('#unsplash');
-                        //Append item to Masonry
-                        var $item = $(item);
-                        $container.append( $item ).masonry().masonry( 'appended', $item );
-                    });
-                    //Set page number value in MORE button
-                    var more = $("<a class='more'>").attr("href", page).html("<span>...</span>");
-                    $("#more").html(more);
-                }, 
-                error: function(){
-                    $(".more").html("ERROR");
-                }
-            });
-        }
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider132
+    const TokenHider135
+    const TokenHider132
+    const TokenHider132
+    const TokenHider133
+    const TokenHider135
+    const TokenHider134
 
-        //Click function to get the next page
-        $(document).on('click', '.more', function() {
-            page = $(".more").attr('href');
-            page++;
-            unsplash(page, filter);
-            return false;
-        });
-        $(document).on('click', '.dropdown a', function(e) {
-            e.preventDefault();
-            $("#unsplash").masonry( 'destroy' );
-            $("#unsplash,#more").empty();
-            filter = $(this).attr("href");
-            unsplash(1, filter);
-        });
-        //Initial Load
-        unsplash(page, filter);
-        
-        $( document ).ajaxComplete(function( event, xhr, settings,XMLHttpRequest ) {
-            setTimeout(function() {
-                if(xhr.status == 200){
-                     $(".more").html("MORE");
-                } else {
-                    $(".more").html("ERROR");
-                }
-            }, 1500);
-        });
+  const TOKEN = "VQxweJWOjpK3xKhhreETX4pdY_z_p_KpbDMfVVzR7qs";
+
+  const resp = await fetch(
+    `https://api.unsplash.com/search/photos?query=YAY&client_id=${TOKEN}`
+  );
+  const j = await resp.json();
+
+  j.results.forEach(x => {
+    const i = new Image();
+    i.onload = () => {
+      const tag = document.createElement("img");
+      tag.src = x.urls.small;
+
+      document.body.appendChild(tag);
     };
-}(jQuery));
+    i.src = x.urls.small;
+  });
+};
+
+splash(); // !
 
 </script>
 
@@ -109,37 +61,30 @@
 
 </head>
 
-<div class="top">
-    <ul>
-      <li><a class="logo" href="#"><i class="fa fa-camera"></i>Unsplash <strong>API</strong></a></li>
-    </ul>
-  </div>
-  <div class="message_holder">
-    <div class="message">
-      <span>Unsplash: Free (do whatever you want) high-resolution photos.</span>
-      <div class="dropdown">
-        <button class="dropbtn">FILTER BY</button>
-        <div class="dropdown-content">
-          <a href="latest">Latest</a>
-          <a href="popular">Popular</a>
-          <a href="oldest">Oldest</a>
+<body>
+
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" href="#"> Jokes</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="./quo.html"> Quotes</a>
+        <a class="flex-sm-fill text-sm-center nav-link " href="./Ideas.html">  Ideas</a>
+        <a class="flex-sm-fill text-sm-center nav-link disabled " href="./Ideas.html"> Images + Videos</a>
+
+    <h1> 🖼 Pictures to Liven up your day!</h1>
+    <p> Let's Face it. Working from Home, Can be Boring! Liven Up With some 😎 sick Pics! </p>
+    <br>
+    <br>
+
+    <div class="md:flex">
+        <div class="md:flex-shrink-0">
+          <img class="rounded-lg md:w-56" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" alt="Woman paying for a purchase">
+        </div>
+        <div class="mt -10 md:mt-0 md:ml-6">
+          <div class="uppercase tracking-wide text-sm text-indigo-700 font-bold"> Sumbit a PR</div>
+          <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline"> Curate Today With Ease!</a>
+          <p class="mt-2 text-gray-600"> Help us Make Bounce Aweasome For EveryBody! Sumbit a PR and Help us Liven Your day!</p>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container" >
-    <div id="unsplash" >
-    </div>
-    <div id="more">
-      <a class="more"><span>...</span></a>
-      </div> 
-  </div>
-</body>
-<script src='js/jquery.min.js'></script>
-<script src='js/jquery.masonry.js'></script>
-<script src='js/imagesloaded.pkgd.js'></script>
-<script src="js/api.js"></script>
-<script>
- 
-</script>
+    <div id="app"></div>
+
+    
 </body>

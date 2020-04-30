@@ -8,7 +8,9 @@
 <meta desc="A Dead Simple Ideas Genrator">
 
 <!-- Scripts, Styles, and Layouts-->
-
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--- HomeBrewed Scripts and Styles/Layouts-->
 <script>
@@ -43,39 +45,94 @@ $(document).ready(function(){
             ideas[16] = "PlaceHolder"
 
         
-
-
+            var selector = Math.floor(Math.random() * 11) 
+        var hover = Math.floor(Math.round() * 11)
+  
+       $('#Jo').text(ideas[selector]);
+    });
+ });
 </script>
 
-<style>
 
 
-    .cl-pur {
-        color:purple;
-        
-    
-    }
-
-    .cl-gre {
-        color:green;
-    }
-
-   .cl-lgre {
-       color:lightgreen;
-   }
-
-   .fnt-wi10 {
-    
-    font-weight: 100;
-
-   }
 
 </style>
 
 
 </head>
 
+<body>
+    <body>
+        <button class="bg-orange-500 hover:bg-red-600 sm:bg-green-500 sm:hover:bg-green-600 md:bg-red-500 md:hover:bg-red-600 lg:bg-indigo-500 lg:hover:bg-indigo-600 xl:bg-pink-500 xl:hover:bg-pink-600 ">
+                Button
+              </button>
 
+        <nav class="nav nav-pills flex-column flex-sm-row">
+                <a class="flex-sm-fill text-sm-center nav-link active" href="#"> Jokes</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="./quo.html"> Quotes</a>
+                <a class="flex-sm-fill text-sm-center nav-link " href="./Ideas.html">  Ideas</a>
+                <a class="flex-sm-fill text-sm-center nav-link disabled " href="./Ideas.html"> Images + Videos</a>
+        
+              </nav>
+              <br>
+
+
+        <div class="jumbotron">
+                <h1 class="display-4"> Get a Idea</h1>
+                <p class="lead">  Get a Product Idea to Build!</p>
+                <hr class="my-4">
+                <p id="Jo"></p>
+                <button class="btn btn-primary btn-lg" href="#" role="button"  id="Jokes"> Tell me a Joke</a>
+              </div>
+
+              <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4"> Created By Woodfi for <a href="https://www.instagram.com/OptiveLabs"> Optive Labs</a></h1>
+                  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        By Woodfi, Learn More!
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                      
+               This App Was Created by  <a href="https://www.github.com/Woodfi">  Woodif</a>! We Create Open Source Tools, For Optive Labs!
+               <br> Feel free to Fork This 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+                </div>
+              </div>
+
+
+              <br>
+              <br>
+              <br>
+
+
+
+             
+
+        </body>
+
+</html>
+</body>
 
 
 
