@@ -6,9 +6,9 @@ Welcome to Bounce! Bounce is a Free, Open-Source Forkable Random Jokes, Ideas an
 # Install
 
 ```
-git clone 
+git clone https://github.com/woodfi/bounce.git
 npm install
 ```
 
 # Demo
-<a href="https://www.getbounce.tk"> Demo </a>
+<a href="https://www.woodfi.github.io/bounce/"> Demo </a>
