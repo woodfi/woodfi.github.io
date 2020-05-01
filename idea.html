@@ -22,7 +22,7 @@ $(document).ready(function(){
 
         });
 
-        $('#Idea).click(() => {
+        $('#Jokes').click(() => {
             var ideas = new Array()
 
          /// Ideas 
@@ -45,7 +45,7 @@ $(document).ready(function(){
             ideas[16] = "PlaceHolder"
 
         
-            var selector = Math.floor(Math.random() * 11) 
+            var selector = Math.floor(Math.random() * 1001) 
         var hover = Math.floor(Math.round() * 11)
   
        $('#Jo').text(ideas[selector]);
@@ -80,7 +80,7 @@ $(document).ready(function(){
                 <p class="lead">  Get a Product Idea to Build!</p>
                 <hr class="my-4">
                 <p id="Jo"></p>
-                <button class="btn btn-warning btn-lg" href="#" role="button"  id="Idea"> Tell me a Joke</a>
+                <button class="btn btn-warning btn-lg" href="#" role="button"  id="Jokes"> Idea Time!</button></a>
               </div>
 
               <div class="jumbotron jumbotron-fluid">
